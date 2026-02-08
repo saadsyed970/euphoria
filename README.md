@@ -33,3 +33,17 @@ User Types:
 - Dealer: Manages everything
 - Backoffice: Orders, Courses, Exams, RMA, Discounts
 - Technician: View all + Manage RMA, Exams, Courses only
+
+## API Design
+
+### Panel App Modules
+ - User Module (Super, Admin, Employee) -> **[CRUD + JWT]**
+ - Manage Team Members (Admin, Employee) -> **[CRUD + JWT]**
+ - Manage Users Module (Dealer, Backoffice, Technician) -> **[CRUD + JWT]**
+ - Manage Products Module (Categories, Subcategories, Products) -> **[CRUD + JWT]**
+ - Manage Orders Module (Online, Ledger) -> **[CRUD + JWT]**
+ - Discount Module -> **[CRUD + JWT]**
+ - RMA (Return Product) Module -> **[RUD + JWT]**
+ - Manage Course and Exam Module -> **[CRUD + JWT]**
+ - Manage Profile Module -> **[RUD + JWT]**
+ - Dashboard -> **[Frontend Only]**
