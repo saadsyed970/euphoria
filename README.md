@@ -1,19 +1,35 @@
 ## Requirements
 
- - Following users are Support Team, Business owners, Business customers.
- - Create an app where owners can manage their e-commerce B2B business with a panel and dashboard, customers can manage and order products of the businesses and support team handles everything.
- - Must have GSTIN based register system for business owner and customer.
- - Ordering system is just is online UPI based and offline credit ledger approval based.
- - A web panel for business owner to view dashboard and manage employees, all sorts of users, categories, subcategories, products, discounts, returns, orders, courses, tests.
- - An ecommerce mobile app for customers to shop items from specific approved businesses, manage their employees, do courses and tests, manage profile.
- - A web panel for support team to handle failures of app, solve any issues of business owner or customer.
+- Users: Support Team, Business Owners, Business Customers
+- App Features:
+  * Owners: Manage e-commerce B2B via Panel + Dashboard
+  * Customers: Manage + Order products from businesses  
+  * Support: Handle all operations
+- Registration: GSTIN-based for Owners + Customers
+- Payments: Online UPI + Offline Credit Ledger (approval-based)
+- Owner Web Panel: Dashboard, Employees, Users, Categories, Subcategories, Products, Discounts, Returns, Orders, Courses, Tests
+- Customer Mobile App: Shop approved businesses, Manage employees, Courses+Tests, Profile
+- Support Web Panel: Fix app failures, Resolve owner/customer issues
+
 
 ## Overview of App
+
+### Panel App
 ![Panel](<misc/Overview of Panel.jpg>)
 
- - There are 3 types of users: Super, Admin and Employee.
- - Super user has access to everything in the management of it's business.
- - Super user registers the business to the app and it gets reviewed and approved by the SaaS company team.
- - Admin and Employee registers by entering credentials and special ID of business, then gets approved by ID provided business.
- - Admin user has access to app less than Super and more than Employee.
- - Employee user has access to app less than Admin as well as Super.
+User Types:
+- Super: Full business management access
+- Super registers business → SaaS team approves
+- Admin/Employee: Register with credentials + Business ID → Approved by business
+- Admin: More access than Employee, less than Super
+- Employee: Least access
+
+### Mobile App
+![Mobile](<misc/Overview of Mobile.jpg>)
+
+User Types:
+- Dealer: Registers with GSTIN + Email/Password (JWT) → Panel Admin approves
+- Backoffice/Technician: Register with Dealer Business ID → Approved by Dealer or Panel Admin
+- Dealer: Manages everything
+- Backoffice: Orders, Courses, Exams, RMA, Discounts
+- Technician: View all + Manage RMA, Exams, Courses only
