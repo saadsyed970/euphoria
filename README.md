@@ -34,16 +34,24 @@ User Types:
 - Backoffice: Orders, Courses, Exams, RMA, Discounts
 - Technician: View all + Manage RMA, Exams, Courses only
 
+## Panel App Modules
+ 
+SrNo.| Module | Inner-Module | Relationship | Access To | Auth (JWT) Requirement | Persistence
+|--|--|--|--|--|--|--|
+1 | Team | Super, Admin, Employee | Self | Super, Admin | 1 | CRUD
+2 | Profile | 0 | 0 | Team | 1 | RUD
+3 | Users | Dealer, Backoffice, Technician | Self | Super, Admin, Dealer | 1 | CRUD
+4 | Products | Category, Subcategory, Product | Order, Discount, Self | Team | 1 | CRUD
+5 | Orders | Digital, BNPL, Track Ledger | Product, User | Team, Dealer, Backoffice | 1 | CRUD
+6 | Discount | 0 | Product, User | Team, User | 1 | CRUD
+7 | RMA | 0 | Product, User | Team, User | 1 | CRUD
+8 | Course | Exam | Exam, User | Team, User | 1 | CRUD
+9 | Dashboard | 0 | 0 | 0 | 0 | R
+10 | Notification | 0 | 0 | All(Read only) | 0 | CRD
+
+## ERD
+
 ## API Design
 
-### Panel App Modules
- - User Module (Super, Admin, Employee) -> **[CRUD + JWT]**
- - Manage Team Members (Admin, Employee) -> **[CRUD + JWT]**
- - Manage Users Module (Dealer, Backoffice, Technician) -> **[CRUD + JWT]**
- - Manage Products Module (Categories, Subcategories, Products) -> **[CRUD + JWT]**
- - Manage Orders Module (Online, Ledger) -> **[CRUD + JWT]**
- - Discount Module -> **[CRUD + JWT]**
- - RMA (Return Product) Module -> **[RUD + JWT]**
- - Manage Course and Exam Module -> **[CRUD + JWT]**
- - Manage Profile Module -> **[RUD + JWT]**
- - Dashboard -> **[Frontend Only]**
+### Team
+> /api/team/register
