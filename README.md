@@ -47,7 +47,7 @@ SrNo.| Module | Inner-Module | Relationship | Access To | Auth (JWT) Requirement
 7 | RMA | 0 | Product, User | Team, User | 1 | CRUD
 8 | Course | Exam | Exam, User | Team, User | 1 | CRUD
 9 | Dashboard | 0 | 0 | 0 | 0 | R
-10 | Notification | 0 | 0 | All(Read only) | 1 | CRD
+10 | Notification | Panel, App | 0 | All(Read only) | 1 | CRD
 
 ## ERD
 ![ERD1](misc/ERD1.jpg)
