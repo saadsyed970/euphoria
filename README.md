@@ -54,4 +54,10 @@ SrNo.| Module | Inner-Module | Relationship | Access To | Auth (JWT) Requirement
 ## API Design
 
 ### Team
-> /api/team/register
+    /api/team/register
+    Method: POST
+    JWT: No
+    {
+      business?: string
+      etc?: string[]
+    }
