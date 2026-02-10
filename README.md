@@ -58,12 +58,22 @@ User Types:
 
 ## API Design
 
-### Team
+#### Register Super
 
-    /api/team/register
+    /api/team/register/super
     Method: POST
-    JWT: No
+    Auth token: False
     {
-      business?: string
-      etc?: string[]
+      id: string,
+      name: string,
+      email: string,
+      phone: string,
+      gstin: string,
+      business: string,
+      address: {
+        pincode: number,
+        state: string,
+        city: string,
+        localAddress: string
+      }
     }
